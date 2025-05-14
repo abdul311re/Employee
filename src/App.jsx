@@ -2,7 +2,7 @@ import './App.css';
 import Route from "./Webroute/Routes"
 function App() {
   return (<>
-  <div >
+  <div className='name'>
     <Route/>
     </div>
   </> );
