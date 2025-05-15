@@ -1,8 +1,8 @@
 import './App.css';
-import Route from "./Webroute/Routes"
+import Route from "./Webroute/Routes.jsx"
 function App() {
   return (<>
-  <div className='name'>
+  <div >
     <Route/>
     </div>
   </> );
