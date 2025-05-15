@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
 
 const Model = () => {
-  const { scene } = useGLTF('/Model/3dmodel-v1.glb'); // use optimized file
+  const { scene } = useGLTF('/Employee/Model/3dmodel-v1.glb'); // use optimized file
 
   return (
     <Canvas camera={{ position: [5, 5, 10], fov: 30 }} style={{ width: '700px', height: '500px' }}>
