@@ -16,33 +16,31 @@ import {
 import { Link } from "react-router-dom";
 
 function Sidebar() {
-  const [activeItem, setActiveItem] = useState("Employees");
-  const [isOpen, setIsOpen] = useState(true);
+  const [activeItem, setActiveItem] = useState("true");
+  const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Dashboard", icon: faHouse , path:"/"},
-    { name: "Employees", icon: faUser, path:"/Employees" },
-    { name: "Sales", icon: faChartBar, path:"/Sales" },
-    { name: "Attendance & Leaves", icon: faUserCheck },
-    { name: "Payroll & Salary", icon: faMoneyCheckAlt },
-    { name: "Performance & Appraisals", icon: faStar },
-    { name: "HR Policies & Documents", icon: faFileAlt },
-    { name: "Recruitment & Hiring", icon: faUserPlus },
-    { name: "Notifications & Alerts", icon: faBell },
-    { name: "Employee Entry Form", icon: faBell , path:"/Form"},
+    { name: "DASHBOARED", icon: faHouse , path:"/"},
+    { name: "CHAT", icon: faUser, path:"/Employees" },
+    { name: "PROJECTS", icon: faChartBar, path:"/Sales" },
+    { name: "TIMESHEET & LEAVE", icon: faUserCheck },
+    { name: "TASKS", icon: faMoneyCheckAlt },
+    { name: "SUPPORT", icon: faStar },
+    { name: "LEADS", icon: faFileAlt },
+    { name: "Calender", icon: faUserPlus },
   ];
 
   return (
-    <div className={`h-full bg-[#fafafa] shadow-lg transition-all ${isOpen ? "w-60" : "w-16"} duration-300 sticky top-0`}>
+    <div className={`h-full bg-black rounded-lg shadow-lg transition-all ${isOpen ? "w-60" : "w-16"} duration-300 `}>
       {/* Toggle Button */}
       <button
-        className={`p-3 text-gray-700  w-full flex ${isOpen ? "justify-end pr-4 pt-4" : "justify-center"}`}
+        className={`p-3 text-gray-700  w-full flex ${isOpen ? "justify-end pr-4 " : "justify-center"}`}
         onClick={() => setIsOpen(!isOpen)} 
       >
        {isOpen ? (
-  <FontAwesomeIcon icon={faTimes} className="text-gray-700 cursor-pointer" />
+  <FontAwesomeIcon icon={faTimes} className="text-white cursor-pointer" />
 ) : (
-  <FontAwesomeIcon icon={faBars} className="text-gray-700 cursor-pointer" />
+  <FontAwesomeIcon icon={faBars} className="text-white cursor-pointer" />
 )}
       </button>
 
@@ -55,12 +53,12 @@ function Sidebar() {
             className={`border-b border-gray-300 p-3 my-3 flex items-center gap-3 cursor-pointer transition-all  ${
               activeItem === item.name
                 ? "bg-gradient-to-r from-[#F54B64] to-[#F78361] text-white "
-                : "text-gray-700 hover:bg-gray-200 text-xs"
+                : "text-white hover:bg-gradient-to-r from-[#F54B64] to-[#F78361]  text-xs"
             }`}
             onClick={() => setActiveItem(item.name)}
           >
             <div className="w-6 flex justify-center">
-              <FontAwesomeIcon icon={item.icon} fontSize={"17px"} />
+              <FontAwesomeIcon icon={item.icon} fontSize={"17px"}  />
             </div>
             <span className={`${isOpen ? "block" : "hidden"} transition-all duration-300`}>{item.name}</span>
           </div></Link>

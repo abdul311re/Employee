@@ -8,8 +8,8 @@ const Model = () => {
     <Canvas camera={{ position: [5, 5, 10], fov: 30 }} style={{ width: '700px', height: '500px' }}>
       <ambientLight intensity={1} />
       <directionalLight position={[15, 15, 15]} />
-      <OrbitControls enableZoom={false} enableRotate={false}/>
-      <primitive object={scene} scale={[5, 5, 5]} position={[0, 0, 0]} rotation={[-0.2, -1.1, 0.3]}/>
+      <OrbitControls enableZoom={false} enableRotate={true}/>
+      <primitive object={scene} scale={[4.5, 4.5, 4.5]} position={[0, 0, 0]} rotation={[-0.2, -1.1, 0.3]}/>
     </Canvas>
   );
 };
